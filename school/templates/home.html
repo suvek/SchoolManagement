@@ -1,0 +1,22 @@
+<h1> Class List</h1>
+<a href="/new_class/"> <input type="submit" value="Add Class" /> </a>
+<a href="/new_student/"> <input type="submit" value="Add Student" /> </a>
+
+<table style="width: 100%"><tr>
+		<td style="width: 25%"> 
+List of classes
+</td>
+</table>
+{% for name in class_name%}
+<table style="width: 100%">
+	
+	</tr>
+	<tr>
+		<td style="width: 25%"> 
+<a href="/detail_class/?id={{ name.id }}"> {{ name.name}} </a>
+</td>
+	</tr>
+		</table>
+
+{% endfor %}
+
