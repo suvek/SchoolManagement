@@ -9,6 +9,11 @@ class ClassForm(forms.ModelForm):
         model = Class
         fields = ['name']
 
+class StudentForm(forms.ModelForm):
+    
+    class Meta:
+        model = Student
+        fields = ['class_name','student_name','address']
     
 
 				

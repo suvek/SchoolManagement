@@ -1,0 +1,30 @@
+<h1>Update student Name:-</h1>
+
+<table style="width: 100%">
+
+	<tr>
+    
+        <td style="width: 20%"><h4>Class Name</h4></td>
+        <td style="width: 20%"><h4>student Name</h4></td>
+        <td style="width: 20%"><h4>address</h4></td>
+        
+    </tr>
+
+    <tr>
+    	
+        <td style="width: 20%">{{ student_detail.class_name }}</td>
+        <td style="width: 20%">{{ student_detail.student_name }}</td>
+        <td style="width: 20%">{{ student_detail.address }}</td>
+       
+    </tr>
+</table>
+<table> <tr>
+<td><a href="/new_student/"> <input type="submit" value="Add Student" /> </a></td>
+<td><a href="/edit_student/?id={{student_detail.id}}">edit student</a></td>
+<td><a href="/confirm_delete/?id={{student_detail.id}}">delete student</a></td>
+
+
+</tr></table>
+	
+   <a href="/"> << </a>
+	  

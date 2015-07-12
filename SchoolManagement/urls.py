@@ -26,4 +26,13 @@ urlpatterns = [
     url(r'^confirm/$', 'school.views.confirmDelete', name='confirmDelete'),
     url(r'^delete/$', 'school.views.deleteClass', name='deleteClass'),
 
+    url(r'^detail_student/$', 'school.views.detailStudent', name='detailStudent'),
+    url(r'^edit_student/$', 'school.views.editStudent', name='editStudent'),
+    url(r'^confirm_delete/$', 'school.views.confirmStudentDelete', name='confirmStudentDelete'),
+    url(r'^delete-Student/$', 'school.views.deleteStudent', name='deleteStudent'),
+
+
+    # url(r'^test/$', 'school.views.stud', name='stud'),
+
+
 ]
