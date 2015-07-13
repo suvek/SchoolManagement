@@ -15,4 +15,4 @@ class Student(models.Model):
 	address = models.CharField(max_length = 100)
 
 	def __str__(self):
-		return u'%s %s' % (self.student_name, self.address)
+		return u'%s' % (self.student_name,)

@@ -27,8 +27,14 @@ def newClass(request):
 
 def detailClass(request):
 	passed_id = request.GET["id"]
-	class_detail = Class.objects.get(pk = passed_id)
-	return render(request,'classDetail.html', {'class_detail': class_detail})
+	# class_detail = Class.objects.get(pk = passed_id)
+	class_detail = Class.objects.get (pk = passed_id)
+	student_detail = Student.objects.filter (class_name = class_detail)
+	return render(request,'classDetail.html', {
+		'class_detail': class_detail,
+		'student_detail':student_detail
+	})
+	# return render(request,'classDetail.html', {'class_detail': class_detail})
 
 
 
@@ -83,11 +89,11 @@ def newStudent(request):
 	return render(request,'newStudent.html',{'form':form})
 
 
-def stud(request):
-	a=1
-	student = Student.objects.get ( id = a)
+# def stud(request):
+# 	a=1
+# 	student = Student.objects.get ( id = a)
     
-	return render(request,'test.html', {'student': student , 'a':a})
+# 	return render(request,'test.html', {'student': student , 'a':a})
 
 
 def detailStudent(request):
